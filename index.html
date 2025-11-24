@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transmission of the Light — Zen Lineage to Daizan Roshi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --stone: #2d2d2d;
+        --bamboo: #4a5d4a;
+        --moss: #3d4a3d;
+        --cream: #f5f2eb;
+        --paper: #ede8df;
+        --gold: #c9a962;
+        --mist: rgba(245, 242, 235, 0.9);
+        --water: #6b8e8e;
+        --rinzai: #8b4d4d;
+        --soto: #4d6b8b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Cormorant Garamond", serif;
+        background: var(--cream);
+        color: var(--ink);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Textured background */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      /* Header */
+      header {
+        text-align: center;
+        padding: 4rem 2rem 3rem;
+        position: relative;
+      }
+
+      header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+
+      .enso {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        opacity: 0;
+        animation: fadeIn 2s ease-out forwards,
+          breathe 8s ease-in-out infinite 2s;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 0.7;
+        }
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: scale(1.02);
+          opacity: 0.8;
+        }
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        opacity: 0;
+        animation: slideUp 1s ease-out 0.3s forwards;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--bamboo);
+        opacity: 0;
+        animation: slideUp 1s ease-out 0.6s forwards;
+      }
+
+      .japanese {
+        font-family: "Noto Serif JP", serif;
+        font-size: 1.4rem;
+        font-weight: 200;
+        color: var(--stone);
+        margin-top: 0.5rem;
+        opacity: 0;
+        animation: slideUp 1s ease-out 0.9s forwards;
+      }
+
+      /* Legend */
+      .legend {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        max-width: 600px;
+        opacity: 0;
+        animation: slideUp 1s ease-out 1.2s forwards;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.1em;
+      }
+
+      .legend-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      .legend-dot.rinzai {
+        background: var(--rinzai);
+      }
+      .legend-dot.soto {
+        background: var(--soto);
+      }
+      .legend-dot.shared {
+        background: linear-gradient(135deg, var(--soto) 50%, var(--rinzai) 50%);
+      }
+
+      /* Main lineage container */
+      .lineage-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+        position: relative;
+      }
+
+      /* Section headers */
+      .section-header {
+        text-align: center;
+        margin: 3rem 0 2rem;
+        position: relative;
+      }
+
+      .section-header h2 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--bamboo);
+        display: inline-block;
+        padding: 0 2rem;
+        background: var(--cream);
+        position: relative;
+        z-index: 1;
+      }
+
+      .section-header::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        right: 10%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--stone),
+          transparent
+        );
+        opacity: 0.3;
+      }
+
+      /* Ancestor nodes */
+      .lineage-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        position: relative;
+      }
+
+      .ancestor {
+        position: relative;
+        text-align: center;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        opacity: 0;
+        animation: nodeAppear 0.8s ease-out forwards;
+      }
+
+      .ancestor:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .ancestor:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .ancestor:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .ancestor:nth-child(4) {
+        animation-delay: 0.25s;
+      }
+      .ancestor:nth-child(5) {
+        animation-delay: 0.3s;
+      }
+      .ancestor:nth-child(6) {
+        animation-delay: 0.35s;
+      }
+      .ancestor:nth-child(7) {
+        animation-delay: 0.4s;
+      }
+      .ancestor:nth-child(8) {
+        animation-delay: 0.45s;
+      }
+      .ancestor:nth-child(9) {
+        animation-delay: 0.5s;
+      }
+      .ancestor:nth-child(10) {
+        animation-delay: 0.55s;
+      }
+
+      @keyframes nodeAppear {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .ancestor::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 15px;
+        background: linear-gradient(to bottom, transparent, var(--gold));
+      }
+
+      .ancestor:first-child::before {
+        display: none;
+      }
+
+      .ancestor:hover {
+        transform: translateY(-2px);
+      }
+
+      .ancestor:hover .name {
+        color: var(--gold);
+      }
+
+      .name {
+        font-size: 1.25rem;
+        font-weight: 400;
+        transition: color 0.3s ease;
+        display: block;
+      }
+
+      .name-jp {
+        font-family: "Noto Serif JP", serif;
+        font-size: 0.9rem;
+        font-weight: 200;
+        color: var(--stone);
+        margin-top: 0.2rem;
+      }
+
+      .dates {
+        font-size: 0.85rem;
+        color: var(--water);
+        font-style: italic;
+        margin-top: 0.2rem;
+      }
+
+      /* Transmission light effect */
+      .transmission-line {
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(
+          to bottom,
+          var(--gold) 0%,
+          rgba(201, 169, 98, 0.3) 50%,
+          var(--gold) 100%
+        );
+        margin: 0 auto;
+        position: relative;
+        animation: pulse 3s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      /* Split section for dual lineages */
+      .split-section {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 2rem;
+        margin: 3rem 0;
+        position: relative;
+      }
+
+      .lineage-branch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 2rem 1rem;
+        border-radius: 8px;
+        position: relative;
+      }
+
+      .lineage-branch.soto {
+        background: linear-gradient(
+          135deg,
+          rgba(77, 107, 139, 0.05) 0%,
+          transparent 100%
+        );
+      }
+
+      .lineage-branch.rinzai {
+        background: linear-gradient(
+          135deg,
+          rgba(139, 77, 77, 0.05) 0%,
+          transparent 100%
+        );
+      }
+
+      .branch-label {
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        padding: 0.25rem 1rem;
+        background: var(--cream);
+      }
+
+      .branch-label.soto {
+        color: var(--soto);
+      }
+      .branch-label.rinzai {
+        color: var(--rinzai);
+      }
+
+      .center-connector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
+      }
+
+      .merge-point {
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(135deg, var(--soto), var(--rinzai));
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(201, 169, 98, 0.5);
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          box-shadow: 0 0 20px rgba(201, 169, 98, 0.3);
+        }
+        to {
+          box-shadow: 0 0 30px rgba(201, 169, 98, 0.7);
+        }
+      }
+
+      /* Daizan highlight */
+      .daizan {
+        background: linear-gradient(
+          135deg,
+          rgba(77, 107, 139, 0.1),
+          rgba(139, 77, 77, 0.1)
+        );
+        border-radius: 12px;
+        padding: 2rem 3rem;
+        margin-top: 2rem;
+        position: relative;
+        border: 1px solid rgba(201, 169, 98, 0.3);
+      }
+
+      .daizan::before {
+        content: "現";
+        position: absolute;
+        top: -0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Noto Serif JP", serif;
+        font-size: 0.8rem;
+        background: var(--cream);
+        padding: 0 0.5rem;
+        color: var(--gold);
+      }
+
+      .daizan .name {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      /* Wikipedia Preview Modal */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(26, 26, 26, 0.7);
+        backdrop-filter: blur(4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+      }
+
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal {
+        background: var(--paper);
+        max-width: 600px;
+        width: 90%;
+        max-height: 80vh;
+        border-radius: 8px;
+        overflow: hidden;
+        transform: translateY(20px) scale(0.95);
+        transition: transform 0.4s ease;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      }
+
+      .modal-overlay.active .modal {
+        transform: translateY(0) scale(1);
+      }
+
+      .modal-header {
+        padding: 1.5rem 2rem;
+        background: linear-gradient(135deg, var(--stone), var(--ink));
+        color: var(--cream);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .modal-header h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      .modal-header .dates {
+        color: var(--gold);
+        font-style: italic;
+        margin-top: 0.25rem;
+      }
+
+      .close-btn {
+        background: none;
+        border: none;
+        color: var(--cream);
+        font-size: 1.5rem;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+        line-height: 1;
+      }
+
+      .close-btn:hover {
+        opacity: 1;
+      }
+
+      .modal-content {
+        padding: 2rem;
+        max-height: 50vh;
+        overflow-y: auto;
+        line-height: 1.8;
+      }
+
+      .modal-content p {
+        margin-bottom: 1rem;
+      }
+
+      .modal-content a {
+        color: var(--bamboo);
+        text-decoration: none;
+        border-bottom: 1px solid var(--bamboo);
+        transition: color 0.3s;
+      }
+
+      .modal-content a:hover {
+        color: var(--gold);
+        border-color: var(--gold);
+      }
+
+      .modal-footer {
+        padding: 1rem 2rem;
+        background: rgba(0, 0, 0, 0.03);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .modal-footer a {
+        color: var(--water);
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+
+      .modal-footer a:hover {
+        color: var(--bamboo);
+      }
+
+      .loading {
+        text-align: center;
+        padding: 3rem;
+        color: var(--stone);
+        font-style: italic;
+      }
+
+      .loading::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--stone);
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 1rem;
+        vertical-align: middle;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Ellipsis for condensed sections */
+      .ellipsis {
+        text-align: center;
+        padding: 0.5rem;
+        color: var(--stone);
+        font-style: italic;
+        opacity: 0.5;
+        letter-spacing: 0.5em;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 4rem 2rem;
+        color: var(--stone);
+        font-size: 0.9rem;
+      }
+
+      footer p {
+        margin-bottom: 0.5rem;
+      }
+
+      .verse {
+        font-style: italic;
+        max-width: 500px;
+        margin: 2rem auto 0;
+        line-height: 1.8;
+        opacity: 0.8;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--cream);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--stone);
+        border-radius: 4px;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .split-section {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .center-connector {
+          display: none;
+        }
+
+        h1 {
+          font-size: 2rem;
+          letter-spacing: 0.2em;
+        }
+
+        .legend {
+          flex-direction: column;
+          gap: 1rem;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <svg class="enso" viewBox="0 0 100 100">
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          fill="none"
+          stroke="#1a1a1a"
+          stroke-width="3"
+          stroke-dasharray="251"
+          stroke-dashoffset="20"
+          stroke-linecap="round"
+          transform="rotate(-90 50 50)"
+        />
+      </svg>
+      <h1>Transmission of the Light</h1>
+      <p class="subtitle">The Zen Lineage to Daizan Roshi</p>
+      <p class="japanese">伝光 — 禅の法脈</p>
+    </header>
+
+    <div class="legend">
+      <div class="legend-item">
+        <span class="legend-dot soto"></span>
+        <span>Sōtō Lineage</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot rinzai"></span>
+        <span>Rinzai Lineage</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot shared"></span>
+        <span>Shared Ancestors</span>
+      </div>
+    </div>
+
+    <main class="lineage-container">
+      <!-- Origin -->
+      <div class="section-header">
+        <h2>The Awakened One</h2>
+      </div>
+
+      <section class="lineage-section">
+        <div class="ancestor" data-wiki="Gautama_Buddha">
+          <span class="name">Śākyamuni Buddha</span>
+          <span class="name-jp">釈迦牟尼仏</span>
+          <span class="dates">c. 563–483 BCE</span>
+        </div>
+      </section>
+
+      <div class="transmission-line"></div>
+
+      <!-- Indian Patriarchs -->
+      <div class="section-header">
+        <h2>Indian Patriarchs</h2>
+      </div>
+
+      <section class="lineage-section">
+        <div class="ancestor" data-wiki="Mahakashyapa">
+          <span class="name">Mahākāśyapa</span>
+          <span class="name-jp">摩訶迦葉</span>
+          <span class="dates">1st Patriarch</span>
+        </div>
+        <div class="transmission-line"></div>
+        <div class="ancestor" data-wiki="Ananda">
+          <span class="name">Ānanda</span>
+          <span class="name-jp">阿難陀</span>
+          <span class="dates">2nd Patriarch</span>
+        </div>
+        <div class="transmission-line"></div>
+        <div class="ellipsis">· · · 24 ancestors · · ·</div>
+        <div class="transmission-line"></div>
+        <div class="ancestor" data-wiki="Prajnatara">
+          <span class="name">Prajñātāra</span>
+          <span class="name-jp">般若多羅</span>
+          <span class="dates">27th Patriarch</span>
+        </div>
+        <div class="transmission-line"></div>
+        <div class="ancestor" data-wiki="Bodhidharma">
+          <span class="name">Bodhidharma</span>
+          <span class="name-jp">菩提達磨</span>
+          <span class="dates">c. 440–528 · 28th Patriarch</span>
+        </div>
+      </section>
+
+      <div class="transmission-line"></div>
+
+      <!-- Chinese Patriarchs -->
+      <div class="section-header">
+        <h2>Chinese Patriarchs</h2>
+      </div>
+
+      <section class="lineage-section">
+        <div class="ancestor" data-wiki="Dazu_Huike">
+          <span class="name">Dàzǔ Huìkě</span>
+          <span class="name-jp">大祖慧可</span>
+          <span class="dates">487–593</span>
+        </div>
+        <div class="transmission-line"></div>
+        <div class="ancestor" data-wiki="Sengcan">
+          <span class="name">Jiànzhì Sēngcàn</span>
+          <span class="name-jp">鑑智僧璨</span>
+          <span class="dates">d. 606</span>
+        </div>
+        <div class="transmission-line"></div>
+        <div class="ancestor" data-wiki="Dayi_Daoxin">
+          <span class="name">Dàyī Dàoxìn</span>
+          <span class="name-jp">大医道信</span>
+          <span class="dates">580–651</span>
+        </div>
+        <div class="transmission-line"></div>
+        <div class="ancestor" data-wiki="Daman_Hongren">
+          <span class="name">Dàmǎn Hóngrěn</span>
+          <span class="name-jp">大満弘忍</span>
+          <span class="dates">601–674</span>
+        </div>
+        <div class="transmission-line"></div>
+        <div class="ancestor" data-wiki="Huineng">
+          <span class="name">Dàjiàn Huìnéng</span>
+          <span class="name-jp">大鑑慧能</span>
+          <span class="dates">638–713 · 6th Patriarch</span>
+        </div>
+      </section>
+
+      <div class="transmission-line"></div>
+
+      <!-- Split into two lineages -->
+      <div class="section-header">
+        <h2>The Dharma Branches</h2>
+      </div>
+
+      <div class="split-section">
+        <!-- Soto/Caodong Branch -->
+        <div class="lineage-branch soto">
+          <span class="branch-label soto">Sōtō / 曹洞</span>
+
+          <div class="ancestor" data-wiki="Qingyuan_Xingsi">
+            <span class="name">Qīngyuán Xíngsī</span>
+            <span class="name-jp">青原行思</span>
+            <span class="dates">660–740</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Shitou_Xiqian">
+            <span class="name">Shítóu Xīqiān</span>
+            <span class="name-jp">石頭希遷</span>
+            <span class="dates">700–790</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ellipsis">· · ·</div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Dongshan_Liangjie">
+            <span class="name">Dòngshān Liángjiè</span>
+            <span class="name-jp">洞山良价</span>
+            <span class="dates">807–869</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ellipsis">· · ·</div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Tiantong_Rujing">
+            <span class="name">Tiāntóng Rújìng</span>
+            <span class="name-jp">天童如浄</span>
+            <span class="dates">1163–1228</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Dōgen">
+            <span class="name">Eihei Dōgen</span>
+            <span class="name-jp">永平道元</span>
+            <span class="dates">1200–1253</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Koun_Ejō">
+            <span class="name">Kōun Ejō</span>
+            <span class="name-jp">孤雲懐奘</span>
+            <span class="dates">1198–1280</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Tettsu_Gikai">
+            <span class="name">Tettsū Gikai</span>
+            <span class="name-jp">徹通義介</span>
+            <span class="dates">1219–1309</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Keizan">
+            <span class="name">Keizan Jōkin</span>
+            <span class="name-jp">瑩山紹瑾</span>
+            <span class="dates">1264–1325</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ellipsis">· · ·</div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-info="koho">
+            <span class="name">Kōhō Keidō Chisan</span>
+            <span class="name-jp">高峰敬道知山</span>
+            <span class="dates">1879–1967</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Houn_Jiyu-Kennett">
+            <span class="name">Hōun Jiyu-Kennett</span>
+            <span class="name-jp">法雲慈友</span>
+            <span class="dates">1924–1996</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-info="daishin">
+            <span class="name">Rev. Master Daishin Morgan</span>
+            <span class="name-jp">大心</span>
+            <span class="dates">b. 1948</span>
+          </div>
+        </div>
+
+        <div class="center-connector">
+          <div class="merge-point"></div>
+        </div>
+
+        <!-- Rinzai/Linji Branch -->
+        <div class="lineage-branch rinzai">
+          <span class="branch-label rinzai">Rinzai / 臨済</span>
+
+          <div class="ancestor" data-wiki="Nanyue_Huairang">
+            <span class="name">Nányuè Huáiràng</span>
+            <span class="name-jp">南嶽懐譲</span>
+            <span class="dates">677–744</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Mazu_Daoyi">
+            <span class="name">Mǎzǔ Dàoyī</span>
+            <span class="name-jp">馬祖道一</span>
+            <span class="dates">709–788</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Baizhang_Huaihai">
+            <span class="name">Bǎizhàng Huáihǎi</span>
+            <span class="name-jp">百丈懐海</span>
+            <span class="dates">720–814</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Huangbo_Xiyun">
+            <span class="name">Huángbò Xīyùn</span>
+            <span class="name-jp">黄檗希運</span>
+            <span class="dates">d. 850</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Linji_Yixuan">
+            <span class="name">Línjì Yìxuán</span>
+            <span class="name-jp">臨済義玄</span>
+            <span class="dates">d. 866</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ellipsis">· · ·</div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Nanpo_Jōmyō">
+            <span class="name">Nanpo Jōmyō</span>
+            <span class="name-jp">南浦紹明</span>
+            <span class="dates">1235–1309</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Shūhō_Myōchō">
+            <span class="name">Shūhō Myōchō</span>
+            <span class="name-jp">宗峰妙超</span>
+            <span class="dates">1282–1338</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Kanzan_Egen">
+            <span class="name">Kanzan Egen</span>
+            <span class="name-jp">関山慧玄</span>
+            <span class="dates">1277–1360</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ellipsis">· · ·</div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Hakuin_Ekaku">
+            <span class="name">Hakuin Ekaku</span>
+            <span class="name-jp">白隠慧鶴</span>
+            <span class="dates">1686–1769</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Gasan_Jitō">
+            <span class="name">Gasan Jitō</span>
+            <span class="name-jp">峨山慈棹</span>
+            <span class="dates">1727–1797</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-wiki="Inzan_Ien">
+            <span class="name">Inzan Ien</span>
+            <span class="name-jp">隱山惟琰</span>
+            <span class="dates">1751–1814</span>
+          </div>
+          <div class="transmission-line"></div>
+          <div class="ellipsis">· · ·</div>
+          <div class="transmission-line"></div>
+          <div class="ancestor" data-info="shinzan">
+            <span class="name">Shinzan Miyamae</span>
+            <span class="name-jp">宮前心山</span>
+            <span class="dates">1935–2021</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daizan Roshi -->
+      <div class="section-header">
+        <h2>Convergence of the Streams</h2>
+      </div>
+
+      <section class="lineage-section">
+        <div class="ancestor daizan" data-info="daizan">
+          <span class="name">Julian Daizan Skinner Roshi</span>
+          <span class="name-jp">寿鸞大山</span>
+          <span class="dates">b. 1963 · Zenways Sangha</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>正法眼蔵 · The Treasury of the True Dharma Eye</p>
+      <div class="verse">
+        "I have the right Dharma Eye Treasury,<br />
+        the wondrous mind of Nirvana,<br />
+        the reality beyond appearance.<br />
+        I now transmit it to Mahākāśyapa."<br />
+        <em>— Śākyamuni Buddha</em>
+      </div>
+    </footer>
+
+    <!-- Modal for previews -->
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <div class="modal-header">
+          <div>
+            <h3 id="modal-title"></h3>
+            <p class="dates" id="modal-dates"></p>
+          </div>
+          <button class="close-btn" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-content" id="modal-content">
+          <div class="loading">Loading</div>
+        </div>
+        <div class="modal-footer">
+          <a id="modal-link" href="#" target="_blank"
+            >Read more on Wikipedia →</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Custom info for those without Wikipedia pages
+      const customInfo = {
+        koho: {
+          title: "Kōhō Keidō Chisan Zenji",
+          dates: "1879–1967",
+          content: `<p>Kōhō Keidō Chisan Zenji was the eighteenth Abbot of Daihonzan Sōji-ji, one of the two head temples of the Sōtō Zen school. Born in Toyama Prefecture, Japan, he was ordained at age eleven.</p>
+                <p>He received dharma transmission from Kōhō Hakugun in 1901 and later received confirmation of his kenshō from both Sōtō and Rinzai masters, demonstrating the traditional emphasis on genuine insight over institutional affiliation.</p>
+                <p>As Chief Abbott of Sōji-ji from 1957 to 1967, he was instrumental in supporting the spread of Zen to the West. He served as the transmission master for Rev. Master Jiyu-Kennett, authorizing her to teach and ordain in the Sōtō tradition.</p>`,
+          link: "https://obcon.org/about-us/founding-teachers/koho-zenji/",
+        },
+        daishin: {
+          title: "Rev. Master Daishin Morgan",
+          dates: "b. 1948",
+          content: `<p>Rev. Master Daishin Morgan is a senior Sōtō Zen priest and a disciple of Rev. Master Jiyu-Kennett, founder of the Order of Buddhist Contemplatives. He has been practicing Zen for over fifty years.</p>
+                <p>He served as Abbot of Throssel Hole Buddhist Abbey in Northumberland, England, since 1982, where he trained many monks and lay practitioners in the Serene Reflection Meditation (Sōtō Zen) tradition.</p>
+                <p>Julian Daizan Skinner trained under Rev. Master Daishin Morgan for fourteen formative years at Throssel Hole, being ordained as an unsui (novice monk) in 1991, before later pursuing Rinzai training in Japan.</p>`,
+          link: "https://throssel.org.uk/dharma-talks-categories/rev-master-daishin-morgan/",
+        },
+        shinzan: {
+          title: "Shinzan Miyamae Roshi",
+          dates: "1935–2021",
+          content: `<p>Shinzan Miyamae Roshi was a Japanese Rinzai Zen master known for his maverick approach to authentic Zen training. He restored Gyokuryuji, the hermitage of the great reformer Bankei Yōtaku.</p>
+                <p>After business failure and contemplating suicide in his thirties, he turned to Zen and was ordained by Mitsui Daishin Roshi. He trained at Shōgen-ji and mastered the complete kōan curriculum of the Mino branch of the Inzan lineage.</p>
+                <p>Critical of the commercialization of modern Zen, he departed from the Myōshinji branch and founded Zendo Kyodan (Zenways Sangha) to focus on genuine awakening. He transmitted the dharma to Julian Daizan Skinner in 2007.</p>`,
+          link: "https://en.wikipedia.org/wiki/Shinzan_Miyamae_Roshi",
+        },
+        daizan: {
+          title: "Julian Daizan Skinner Roshi",
+          dates: "b. 1963",
+          content: `<p>Julian Daizan Skinner Roshi (Juran Daizan 寿鸞大山) is a British Rinzai Zen Buddhist Rōshi who holds the rare distinction of having received Dharma Transmission in both the Rinzai and Sōtō lineages of Zen.</p>
+                <p>Born in Chatham, UK, he trained for fourteen years under Rev. Master Daishin Morgan at Throssel Hole Buddhist Abbey in the Sōtō tradition. In 2003, he began training with Shinzan Miyamae Rōshi in Japan, completing the Inzan kōan curriculum and receiving inka (transmission) in 2007.</p>
+                <p>He is the founder of Zenways Sangha and serves as resident teacher at Yugagyo Dojo in London. His teaching integrates both Rinzai and Sōtō approaches, emphasizing genuine insight while making Zen practice accessible to modern Western practitioners.</p>`,
+          link: "https://zenways.org/about-our-teachers/",
+        },
+      };
+
+      // Wikipedia API fetch
+      async function fetchWikipedia(title) {
+        const endpoint = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(
+          title
+        )}`;
+        try {
+          const response = await fetch(endpoint);
+          if (!response.ok) throw new Error("Not found");
+          return await response.json();
+        } catch (error) {
+          return null;
+        }
+      }
+
+      // Modal functions
+      function openModal() {
+        document.getElementById("modal").classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      // Handle ancestor clicks
+      document.querySelectorAll(".ancestor").forEach((ancestor) => {
+        ancestor.addEventListener("click", async () => {
+          const wikiTitle = ancestor.dataset.wiki;
+          const infoKey = ancestor.dataset.info;
+          const name = ancestor.querySelector(".name").textContent;
+          const dates = ancestor.querySelector(".dates").textContent;
+
+          document.getElementById("modal-title").textContent = name;
+          document.getElementById("modal-dates").textContent = dates;
+          document.getElementById("modal-content").innerHTML =
+            '<div class="loading">Loading</div>';
+
+          openModal();
+
+          if (infoKey && customInfo[infoKey]) {
+            const info = customInfo[infoKey];
+            document.getElementById("modal-title").textContent = info.title;
+            document.getElementById("modal-dates").textContent = info.dates;
+            document.getElementById("modal-content").innerHTML = info.content;
+            document.getElementById("modal-link").href = info.link;
+            document.getElementById("modal-link").textContent = "Learn more →";
+          } else if (wikiTitle) {
+            const data = await fetchWikipedia(wikiTitle);
+            if (data && data.extract) {
+              document.getElementById(
+                "modal-content"
+              ).innerHTML = `<p>${data.extract}</p>`;
+              document.getElementById("modal-link").href =
+                data.content_urls.desktop.page;
+              document.getElementById("modal-link").textContent =
+                "Read more on Wikipedia →";
+            } else {
+              document.getElementById("modal-content").innerHTML = `
+                            <p>This ancestor is part of the traditional Zen lineage, representing an unbroken chain of dharma transmission from teacher to student.</p>
+                            <p>While detailed biographical information may be limited, their place in the lineage signifies the authentic transmission of the Buddha's teaching.</p>
+                        `;
+              document.getElementById(
+                "modal-link"
+              ).href = `https://en.wikipedia.org/wiki/${wikiTitle}`;
+            }
+          }
+        });
+      });
+
+      // Close modal on overlay click
+      document.getElementById("modal").addEventListener("click", (e) => {
+        if (e.target.id === "modal") closeModal();
+      });
+
+      // Close modal on Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+    </script>
+  </body>
+</html>

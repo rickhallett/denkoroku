@@ -513,6 +513,21 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        transition: background 0.3s ease;
+      }
+
+      .modal-header.gold {
+        background: linear-gradient(135deg, var(--gold), #8a7340);
+        color: var(--ink);
+      }
+
+      .modal-header.gold .dates {
+        color: var(--ink);
+        opacity: 0.8;
+      }
+
+      .modal-header.gold .close-btn {
+        color: var(--ink);
       }
 
       .modal-header h3 {
@@ -691,8 +706,8 @@
         />
       </svg>
       <h1>Transmission of the Light</h1>
-      <p class="subtitle">The Zen Lineage to Daizan Roshi</p>
-      <p class="japanese">伝光 — 禅の法脈</p>
+      <p class="subtitle">光明 — Kōmyō — Sublime Light</p>
+      <p class="japanese">From Śākyamuni Buddha to Daizan Roshi</p>
     </header>
 
     <div class="legend">
@@ -744,7 +759,15 @@
           <span class="dates">2nd Patriarch</span>
         </div>
         <div class="transmission-line"></div>
-        <div class="ellipsis">· · · 24 ancestors · · ·</div>
+        <div class="ellipsis">· · · 11 ancestors · · ·</div>
+        <div class="transmission-line"></div>
+        <div class="ancestor" data-wiki="Nagarjuna">
+          <span class="name">Nāgārjuna</span>
+          <span class="name-jp">龍樹</span>
+          <span class="dates">c. 150–250 CE · 14th Patriarch</span>
+        </div>
+        <div class="transmission-line"></div>
+        <div class="ellipsis">· · · 12 ancestors · · ·</div>
         <div class="transmission-line"></div>
         <div class="ancestor" data-wiki="Prajnatara">
           <span class="name">Prajñātāra</span>
@@ -1039,18 +1062,26 @@
         shinzan: {
           title: "Shinzan Miyamae Roshi",
           dates: "1935–2021",
-          content: `<p>Shinzan Miyamae Roshi was a Japanese Rinzai Zen master known for his maverick approach to authentic Zen training. He restored Gyokuryuji, the hermitage of the great reformer Bankei Yōtaku.</p>
-                <p>After business failure and contemplating suicide in his thirties, he turned to Zen and was ordained by Mitsui Daishin Roshi. He trained at Shōgen-ji and mastered the complete kōan curriculum of the Mino branch of the Inzan lineage.</p>
-                <p>Critical of the commercialization of modern Zen, he departed from the Myōshinji branch and founded Zendo Kyodan (Zenways Sangha) to focus on genuine awakening. He transmitted the dharma to Julian Daizan Skinner in 2007.</p>`,
+          content: `<p>Shinzan Miyamae Roshi (宮前心山) was born Junichi Miyamae in Niigata, Japan in 1935. After studying economics at Doshisha University in Kyoto, he pursued a business career. A devastating business failure in his thirties brought him to the brink of despair—a crisis that paradoxically became the catalyst for his profound spiritual journey.</p>
+                <p>He was ordained as a Zen monk by Mitsui Daishin Roshi (1903–1992), under whom he trained in the rigorous Inzan lineage of Rinzai Zen. In 1990, Shinzan Roshi undertook the restoration of Gyokuryuji, the historic hermitage of the celebrated Edo-period master Bankei Yōtaku Zenji (1622–1693), located in Gifu Prefecture. This was not merely an architectural restoration but a spiritual revival—an attempt to return to what he saw as the authentic heart of Rinzai practice: the direct cultivation of spiritual insight.</p>
+                <p>A fearless iconoclast, Shinzan Roshi was openly critical of the commercialization and institutionalization of modern Zen, particularly the traditional system of funeral charges that supported temples. In 2005, by mutual agreement with the Myōshinji headquarters, he withdrew from the branch to teach as an independent monk. He founded Zendo Kyodan (禅道教団 – Zenways Sangha), a primarily lay-based organization dedicated to making authentic Zen practice accessible beyond traditional monastic settings.</p>
+                <p>His compassion knew no boundaries—he was notably willing to teach former members of the Aum Shinrikyo cult after the 1995 Tokyo subway attacks, a stance that set him apart from the mainstream Buddhist establishment but reflected his belief that no one was beyond transformation.</p>
+                <p>As a Zen artist, his bold calligraphy embodied over half a century of practice—each brushstroke reflecting his fearless and indomitable character. His life and art were celebrated in the 2015 book <em>The Zen Character: Life, Art and Teachings of Zen Master Shinzan Miyamae</em>, published to commemorate his eightieth birthday.</p>
+                <p>Shinzan Roshi transmitted the Dharma to Julian Daizan Skinner in May 2007—making him the first Englishman to receive inka in the Rinzai tradition—followed by Melody Cornell Eshin Roshi (2009), Matt Shinkai Kane (2017), and Tomio Yugaku Ameku and Barbara Jikai Gabrys (2018). He continued teaching at Gyokuryuji until his passing in 2021, leaving a legacy of unwavering dedication to authentic practice.</p>`,
           link: "https://en.wikipedia.org/wiki/Shinzan_Miyamae_Roshi",
         },
         daizan: {
           title: "Julian Daizan Skinner Roshi",
           dates: "b. 1963",
-          content: `<p>Julian Daizan Skinner Roshi (Juran Daizan 寿鸞大山) is a British Rinzai Zen Buddhist Rōshi who holds the rare distinction of having received Dharma Transmission in both the Rinzai and Sōtō lineages of Zen.</p>
-                <p>Born in Chatham, UK, he trained for fourteen years under Rev. Master Daishin Morgan at Throssel Hole Buddhist Abbey in the Sōtō tradition. In 2003, he began training with Shinzan Miyamae Rōshi in Japan, completing the Inzan kōan curriculum and receiving inka (transmission) in 2007.</p>
-                <p>He is the founder of Zenways Sangha and serves as resident teacher at Yugagyo Dojo in London. His teaching integrates both Rinzai and Sōtō approaches, emphasizing genuine insight while making Zen practice accessible to modern Western practitioners.</p>`,
-          link: "https://zenways.org/about-our-teachers/",
+          content: `<p>Julian Daizan Skinner Roshi (寿鸞大山 Juran Daizan) is a pioneering British Zen master who holds the rare distinction of being the first Englishman to receive Dharma transmission in both the Rinzai and Sōtō lineages of Zen Buddhism.</p>
+                <p>Before embarking on his spiritual path, Daizan Roshi worked in the pharmaceutical industry. A profound calling led him to make a radical life change: he left his profession, sold his possessions, donated the proceeds to charity, and committed himself fully to Zen practice. His early training was in the Sōtō tradition under Rev. Master Daishin Morgan at Throssel Hole Buddhist Abbey in Northumberland, where he spent fourteen formative years.</p>
+                <p>In 2003, he travelled to Japan to train under Shinzan Miyamae Roshi at Gyokuryuji—the historic hermitage of Bankei Yōtaku Zenji—immersing himself in the rigorous Inzan lineage of Rinzai Zen. After years of intensive practice completing the traditional kōan curriculum, Shinzan Roshi conferred inka upon him in May 2007, authorizing him to teach and transmit the Dharma.</p>
+                <p>Upon returning to Britain, Daizan Roshi undertook a remarkable walking pilgrimage in the traditional <em>takuhatsu</em> style—walking from the Isle of Wight to the northern tip of Scotland, living solely on alms and the generosity of strangers. This 1,000-mile journey allowed him to connect deeply with the land and its people, and many of those he met along the way became his first students.</p>
+                <p>These encounters led to the founding of Zenways (Zendo Kyodan) in 2007, continuing the lay-based Rinzai organization established by his teacher. In 2011, together with his students, he established Yugagyo Dojo, a dedicated Zen training center in South London. He also taught at The Buddhist Society—Europe's oldest non-sectarian Buddhist organization—until December 2011.</p>
+                <p>Beyond Zen, Daizan Roshi has studied yoga extensively across Europe, America, and Asia. As a registered E-RYT500 yoga teacher with over 5,000 hours of teaching experience, he integrates these practices to offer a holistic path combining physical challenge with mental and spiritual development. He has developed professional teacher training courses in both yoga and meditation, fostering a worldwide community of Zenways teachers.</p>
+                <p>A prolific author, his works include <em>In Heaven's River: Poems and Carvings by Mountain Monk Enku</em> (2015), <em>The Zen Character: Life, Art and Teachings of Zen Master Shinzan Miyamae</em> (2015), <em>Practical Zen: Meditation and Beyond</em> (2017), <em>Practical Zen for Health, Wealth and Mindfulness</em> (2018), <em>Rough Waking: For Those Confined And Homeless</em> (2019), and <em>Practical Zen Yoga</em> (2023).</p>
+                <p>Through his unique integration of Rinzai and Sōtō approaches, his innovative teaching methods, and his commitment to making authentic Zen practice accessible to contemporary Western life, Daizan Roshi continues to guide practitioners at Yugagyo Dojo and through Zenways communities worldwide.</p>`,
+          link: "https://zenways.org/about-daizan/",
         },
       };
 
@@ -1091,6 +1122,14 @@
           document.getElementById("modal-dates").textContent = dates;
           document.getElementById("modal-content").innerHTML =
             '<div class="loading">Loading</div>';
+
+          // Apply gold header for Daizan and Shinzan
+          const modalHeader = document.querySelector(".modal-header");
+          if (infoKey === "daizan" || infoKey === "shinzan") {
+            modalHeader.classList.add("gold");
+          } else {
+            modalHeader.classList.remove("gold");
+          }
 
           openModal();
 

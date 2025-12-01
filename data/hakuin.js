@@ -1,0 +1,15 @@
+/**
+ * Hakuin Ekaku - Reviver of Rinzai Zen
+ */
+biographies.hakuin = {
+  title: "Hakuin Ekaku",
+  dates: "1686–1769",
+  content: `<p>Hakuin Ekaku (白隠慧鶴, "White Concealment, Wisdom Crane") single-handedly revived Japanese Rinzai Zen from three centuries of decline, systematized kōan practice into the curriculum still used today, and created thousands of paintings and calligraphies that brought Zen teaching to common people. Every living Rinzai master traces their dharma lineage through him.</p>
+    <p>Born in 1686 in the town of Hara at the foot of Mount Fuji, Hakuin experienced terror of hell as a child after hearing a priest's vivid sermon. This fear drove his spiritual search. At fifteen, he ordained as a monk, initially disappointed to find monasteries focused on scholarly pursuits rather than the intense practice he sought.</p>
+    <p>Hakuin's path to awakening was dramatic and prolonged. At twenty-four, while reading the <em>Wúmén Guān</em> (Gateless Gate), he experienced his first <em>kenshō</em> while meditating on the kōan "Zhàozhōu's Dog." He was so elated he thought no one in hundreds of years had achieved such profound realization. The old master Dōkyō Etan (Shōju Rōjin) quickly disabused him of this pride, dismissing him as a "poor cave-dwelling devil." Crushed, Hakuin continued training until one day, while begging in a village, an old woman struck him with a broom—and his realization finally broke through completely.</p>
+    <p>He returned to his hometown temple, Shōinji, and spent the rest of his life teaching. His impact on Rinzai was revolutionary. He systematized the hundreds of traditional kōans into a structured curriculum, arranged by difficulty, that students work through over years of training. He created new kōans, including the famous "What is the sound of one hand clapping?" (literally: "What is the sound of one hand?"). He taught that three things are essential: great faith, great doubt, and great resolve.</p>
+    <p>Hakuin's art was equally important. Beginning serious painting only around age sixty, he created tens of thousands of works—calligraphies, paintings of Daruma, Hotei, mountains, and ordinary scenes—that communicated Zen teaching to illiterate commoners who could not read scriptures. His bold, spontaneous brushwork expressed enlightened freedom; his subjects ranged from the sublime to the whimsical. His Daruma images, glaring from countless scrolls, have become iconic.</p>
+    <p>He also developed healing techniques for "Zen sickness"—the physical and mental exhaustion that can result from intense practice—recorded in works like <em>Yasenkanna</em>. His voluminous writings include letters, commentaries, poems, and the autobiographical <em>Wild Ivy</em>.</p>
+    <p>When Hakuin died in 1769 at age eighty-three, he had transformed Rinzai Zen from a moribund tradition into a vibrant school that would spread throughout Japan and eventually the world. Every Rinzai lineage today—every student working with kōans—owes their practice to his revival.</p>`,
+  link: "https://en.wikipedia.org/wiki/Hakuin_Ekaku"
+};

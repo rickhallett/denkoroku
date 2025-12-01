@@ -1,0 +1,14 @@
+/**
+ * Hōun Jiyu-Kennett - Pioneer of Western Sōtō Zen
+ */
+biographies.jiyukennett = {
+  title: "Hōun Jiyu-Kennett",
+  dates: "1924–1996",
+  content: `<p>Hōun Jiyu-Kennett (法雲慈友, "Dharma Cloud, Compassionate Friend"), born Peggy Teresa Nancy Kennett in Sussex, England, was a pioneering Buddhist teacher who became the first Western woman authorized to teach Sōtō Zen. She founded the Order of Buddhist Contemplatives and established Shasta Abbey in California and Throssel Hole Abbey in England, creating training institutions that brought traditional monastic Zen to the West.</p>
+    <p>Before finding Buddhism, Kennett pursued music, studying medieval music at Durham University and then earning a scholarship to Trinity College of Music in London. In 1954, she joined the Buddhist Society in London, where she studied and lectured. There she met the famous scholar D.T. Suzuki and developed a strong interest in Zen. When Chief Abbot Kōhō Chisan Zenji of Sōjiji visited the Buddhist Society in 1960, she helped arrange his stay—and he invited her to become his student in Japan.</p>
+    <p>In 1962, she arrived at Sōjiji, the second-largest Zen training monastery in the world. As the only Westerner and the only woman in an all-male community of hundreds, she faced extraordinary challenges. The institutional resistance to her presence was considerable, but Chisan Zenji personally supported her training, and she persevered with remarkable determination.</p>
+    <p>Her certifications were unprecedented. Chisan Zenji obtained for her authorizations that had never before been granted to a woman in Japanese Sōtō Zen—including full dharma transmission and authorization to teach and ordain. Years later, a Japanese Sōtō nun visited her at Shasta Abbey and explained that the precedents Kennett Roshi established had been instrumental in achieving complete parity for women in the Sōtōshū.</p>
+    <p>Returning to the West in 1969, she founded Shasta Abbey in Mount Shasta, California, in 1970, serving as abbess until her death. In 1972, her British disciples established Throssel Hole Priory (now Abbey) in Northumberland, England. These institutions developed a distinctive training style that she called "Serene Reflection Meditation"—essentially Sōtō practice adapted for Western students, with liturgy translated into English and some elements drawn from English monastic traditions.</p>
+    <p>She trained hundreds of monks, nuns, and lay ministers, creating an extensive network of temples and meditation groups throughout North America and Europe. Her books, including <em>Zen is Eternal Life</em> and <em>The Wild, White Goose</em> (her two-volume account of training in Japan), introduced many Westerners to Zen practice. She died in 1996, having established lasting institutions and trained the teachers who continue her lineage today.</p>`,
+  link: "https://en.wikipedia.org/wiki/Houn_Jiyu-Kennett"
+};

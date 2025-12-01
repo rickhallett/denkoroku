@@ -1,0 +1,14 @@
+/**
+ * Dàjiàn Huìnéng - Sixth Chinese Patriarch
+ */
+biographies.huineng = {
+  title: "Dàjiàn Huìnéng",
+  dates: "638–713 · 6th Patriarch",
+  content: `<p>Huìnéng (慧能), the Sixth and last officially recognized Patriarch of Chan, is arguably the most influential figure in Zen history after the Buddha himself. His radical teaching of sudden enlightenment and his emphasis on the inherent Buddha-nature in all beings shaped every subsequent development of Chan and Zen Buddhism. The <em>Platform Sutra</em>, attributed to his teachings, is the only Chinese Buddhist text accorded the status of a "sutra."</p>
+    <p>According to tradition, Huìnéng was born to a poor family in southern China. His father died when he was young, and he supported his widowed mother by gathering and selling firewood. One day in the marketplace, he heard a customer reciting the Diamond Sutra. When he heard the line "One should activate one's mind so that it has no attachment," he experienced a sudden awakening—remarkable for someone who had never studied Buddhism and, according to legend, could not read or write.</p>
+    <p>The customer told him about Master Hóngrěn at East Mountain. Though he traveled five hundred miles to seek teaching, Hóngrěn assigned him to the threshing room rather than admitting him to formal training. For eight months, Huìnéng pounded rice while deepening his insight. When the poetry contest was announced, he had someone write his now-famous verse on the wall, surpassing the senior monk Shénxiù's understanding. Hóngrěn recognized Huìnéng's superior realization and secretly transmitted the patriarchate to him, advising him to flee south to avoid jealous monks.</p>
+    <p>Huìnéng spent the next sixteen years in hiding among hunters before formally receiving ordination and beginning to teach at Bǎolín Temple in Cáoxī. His teaching was revolutionary in its directness: Buddha-nature is not something acquired through practice—it is our original nature, already perfect and complete. Enlightenment is not gradual attainment but sudden recognition of what has always been present. "Seeing your own nature is enlightenment," he declared.</p>
+    <p>His Platform Sutra teaching on "no-thought" (<em>wúniàn</em>), "no-form" (<em>wúxiàng</em>), and "non-abiding" (<em>wúzhù</em>) became cornerstones of Chan philosophy. He also famously democratized enlightenment, insisting that awakening was available to all—educated or illiterate, monastic or lay, male or female, northerner or southerner.</p>
+    <p>All surviving lineages of Chan and Zen Buddhism descend from Huìnéng. Though the historical record may mix legend with fact—modern scholars question whether he was truly illiterate—his symbolic significance is undeniable: a poor, uneducated commoner from the south who surpassed all the learned monks through direct insight into the nature of mind.</p>`,
+  link: "https://en.wikipedia.org/wiki/Huineng"
+};

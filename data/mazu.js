@@ -1,0 +1,14 @@
+/**
+ * Mǎzǔ Dàoyī - "Horse Master"
+ */
+biographies.mazu = {
+  title: "Mǎzǔ Dàoyī",
+  dates: "709–788",
+  content: `<p>Mǎzǔ Dàoyī (馬祖道一, "Horse Ancestor of the Way," Japanese: Baso Dōitsu) was perhaps the most influential teaching master in the formation of Chan Buddhism. His innovative methods—sudden shouts, physical blows, and unconventional responses—transformed Chan from a meditation tradition into a dynamic, iconoclastic school of direct awakening. The <em>Transmission of the Lamp</em> describes him memorably: "His appearance was remarkable. He strode along like a bull and glared about him like a tiger."</p>
+    <p>Born in Sichuan Province, Mǎzǔ became a monk at a young age and initially devoted himself to intensive seated meditation. His encounter with Nányuè Huáiràng, who polished a tile to demonstrate the futility of "sitting to become Buddha," initiated his awakening. After ten years of training, he received dharma transmission and began teaching on Mount Gong in Jiangxi Province, establishing what became known as the Hóngzhōu school—the dominant Chan tradition of the Tang Dynasty.</p>
+    <p>Mǎzǔ's teaching is crystallized in two famous statements: "This mind is Buddha" (<em>jíxīn shì fó</em>) and "Ordinary mind is the Way" (<em>píngchángxīn shì dào</em>). But he wielded these expressions as skillful means, not fixed doctrines. When students became attached to "this mind is Buddha," he would say "neither mind nor Buddha." His point was always the same: don't grasp at anything, even enlightened-sounding phrases.</p>
+    <p>He pioneered "shock" methods to jolt students out of conceptual thinking. He would shout "Katsu!" (喝) without warning, strike students suddenly, twist their noses, or call out their names as they walked away—anything to interrupt the stream of discursive thought and reveal the empty, luminous awareness that was always already present. In his assemblies, no one knew what to expect.</p>
+    <p>The famous "wild duck" encounter with his student Bǎizhàng exemplifies his approach: Seeing wild ducks flying overhead, Mǎzǔ asked, "What is that?" Bǎizhàng replied, "Wild ducks." Mǎzǔ asked, "Where have they gone?" Bǎizhàng said, "They've flown away." Mǎzǔ suddenly twisted Bǎizhàng's nose painfully. When Bǎizhàng cried out in pain, Mǎzǔ said: "You say they've flown away, but they've been here from the very beginning." In that moment of pain, beyond any concept, Bǎizhàng awakened.</p>
+    <p>Mǎzǔ's 139 dharma heirs spread his teaching throughout China, including such luminaries as Bǎizhàng (who created the Chan monastic rules) and Nánquán Pǔyuàn (whose "killing the cat" kōan remains one of Zen's most controversial). Through his lineage, all surviving schools of Chan and Zen eventually trace their ancestry.</p>`,
+  link: "https://en.wikipedia.org/wiki/Mazu_Daoyi"
+};
